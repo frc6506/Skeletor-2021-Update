@@ -31,10 +31,10 @@ public class Robot extends TimedRobot {
   Spark rightMotor2 = new Spark(3);
   SpeedControllerGroup leftMotors = new SpeedControllerGroup(leftMotor1, leftMotor2);
   SpeedControllerGroup rightMotors = new SpeedControllerGroup(rightMotor1, rightMotor2);
-  //drivetrain
+  // drivetrain
   DifferentialDrive drive = new DifferentialDrive(leftMotors, rightMotors);
 
-  //joystick
+  // joystick
   Joystick joystick = new Joystick(0);
 
   /**
@@ -100,7 +100,7 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during operator control. */
   @Override
   public void teleopPeriodic() {
-    drive.arcadeDrive(joystick.getRawAxis(1)*.75, joystick.getRawAxis(0)*.65);
+    drive.arcadeDrive(joystick.getRawAxis(1) * .75, joystick.getRawAxis(0) * .65);
   }
 
   /** This function is called once when the robot is disabled. */
